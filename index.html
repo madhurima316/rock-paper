@@ -4,8 +4,30 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>rock-paper-scissor</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <script src="main.js"></script>
+    <h1>ROCK PAPER SCISSORS</h1>
+    <div class="buttons">
+    <button class="move"><img src="image/rock.png" alt="rock" onclick="playerMove('rock')" ></button>
+    <button class="move"><img src="image/paper.png" alt="paper" onclick="playerMove('paper')"></button>
+    <button class="move"><img src="image/scissors.png" alt="scissors" onclick="playerMove('scissors')"></button>
+</div>
+    <p class="moves" >Your move - Computer move</p>
+    <b><p class="result">result</p></b>
+    <p class="score"> win:0 loss:0 tie:0 </p>
+    <button onclick="
+        points.win=0;
+        points.loss=0;
+        points.tie=0;
+        console.log(points)
+        document.querySelector('.score').innerHTML = `win:${points.win} loss:${points.loss} tie:${points.tie}`
+        document.querySelector('.moves').innerHTML= ' Your move - Computer move' 
+        " >
+    restart</button>
+
+    <!-- <script src="main.js"></script> -->
+    <script src="javascript.js"></script>   
+    
 </body>
 </html>
